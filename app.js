@@ -34,7 +34,7 @@ const cargarPeliculas = async() => {
             peliculas += `
                 <div class="pelicula">
                     <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
-                    <h3 class="titulo">${pelicula.title}</h3>;
+                    <h3 class="titulo">${pelicula.title}</h3>
                 </div>
                 `;
         })
@@ -53,4 +53,38 @@ const cargarPeliculas = async() => {
     }
 }
 
+function getCharacter(done){
+
+    const results = fetch("https://rickandmortyapi.com/api/character") ;
+
+    results
+        .then(response => response.json())
+        .then(data =>{
+            done(data)
+        })
+}
+
+getCharacter(data => {
+    data.results.forEach(personaje =>{
+
+        const article = document.createRange().createContextualFragment(`
+			<article>
+				<div class="image-container">
+					<img src="${personaje.image}" alt="Personaje"/>
+				</div>
+				<h2>${personaje.name}</h2>
+				<span>${personaje.status}</span>
+			</article>
+        `)
+
+        const main =document.querySelector("main");
+        main.append(article);
+    })
+})
+
+
+
+
+getCharacter();
 cargarPeliculas();
+
