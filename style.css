@@ -1,0 +1,159 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*Peliculas*/
+.bodyPeli {
+	font-family: 'Montserrat', sans-serif;
+	background: #e0e0e0;
+	color: #1d1d1d;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+}
+
+.contenedor .pelicula {
+	text-align: center;
+}
+
+.contenedor .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .pelicula .poster {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.paginacion {
+
+	bottom: 0;
+	background: #100a1f;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #241744;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: #137c32;
+}
+
+/*Rick & Morty*/
+
+h1 {
+	text-align: center;
+}
+
+main {
+	padding: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 18px;
+}
+
+.image-container {
+	display:flex;
+}
+
+.image-container img {
+	width: 100%;
+}
+
+.rick {
+	padding: 10px;
+	box-shadow: 0px 0px 1px #000;
+}
+
+
+/*Usuario random*/
+
+.bodyRandom {
+    background-color: aliceblue;
+    font-family: 'Nunito', sans-serif;
+}
+
+.h1Random {
+    background: linear-gradient(to right, rgb(0, 49, 148), rgb(0, 179, 255));
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    color: aliceblue;
+    padding: 5px;
+    box-shadow: 0px 2px 5px gray;
+}
+
+.contenedorRandom {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    box-shadow: 2px 2px 7px rgb(187, 198, 214);
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        width: 90%;
+    }
+}
+
+.textRandom {
+    color: rgb(119, 137, 172);
+}
+
+img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.botonRandom {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.buttonRandom {
+    border: none;
+    background: linear-gradient(to right, rgb(14, 67, 174), rgb(7, 94, 224));
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all ease 400ms;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
