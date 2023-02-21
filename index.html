@@ -13,6 +13,8 @@
 </head>
 <body>
 	<div class=".container">
+		
+			<!--Peliculas-->
 		<div class="bodyPeli">
 			<h1>Peliculas populares</h1>
 			<div class="contenedor" id="contenedor"></div>
@@ -22,7 +24,7 @@
 				<button id="btnSiguiente">Siguiente</button>
 			</div>
 		</div>
-
+			<!--Rick y Mortys-->
 		<h1>Personajes Rick y Morty</h1>
 		<div>
 		<br>
@@ -30,23 +32,39 @@
 		</main>
 		</div>	
 
+			<!--Generador de Usuarios random-->
 		<section class="bodyRandom">
-		<h1 class="h1Random">Usuarios random</h1>
-		<div class="contenedorRandom">
-			<img src="" alt="Perfil de Usuario" id="foto">
-			<h2>Nombre: <span class="textRandom" id=nombre></span></h2>
-			<div>
-				<p>Correo: <span class="textRandom" id=correo></span></p>
-				<p>Telefono: <span class="textRandom" id=telefono></span></p>
+			<h1 class="h1Random">Usuarios random</h1>
+			<div class="contenedorRandom">
+				<img src="" alt="Perfil de Usuario" id="foto">
+				<h2>Nombre: <span class="textRandom" id=nombre></span></h2>
+				<div>
+					<p>Correo: <span class="textRandom" id=correo></span></p>
+					<p>Telefono: <span class="textRandom" id=telefono></span></p>
+				</div>
+
+				<div class="botonRandom">
+					<button class="buttonRandom" id="boton">Generar Usuario</button>
+				</div>
 			</div>
-
-			<div class="botonRandom">
-				<button class="buttonRandom" id="boton">Generar Usuario</button>
-			</div>
-
-
-		</div>
 		</section>
+
+			<!--Breaking bad === api caida-->
+
+		<section class="bodyBad">
+			<h1 class="h1Bad">Usuarios random</h1>
+			<div class="informacion">
+				<h2 class="h2Bad" id="fraseBad">Aqui va la frase: </h2>
+				<p id="autorBad">Allo</p>
+			</div>
+
+				<div class="botonBad">
+					<button class="buttonBad" id="botonBad">Generar frase</button>
+				</div>
+			</div>
+		</section>
+
+
 
 	</div>
 

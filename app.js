@@ -124,6 +124,37 @@ boton.addEventListener('click', generarUsuario)
 document.addEventListener('DOMContentLoaded', generarUsuario);
 
 
+/*Breaking Bad ==== api caida*/
+const botonBad =document.querySelector("#botonBad")
+
+const autorBad =document.querySelector("#autorBad")
+const fraseBad =document.querySelector("#fraseBad")
+
+const consultarApiBad = async() => {
+    const random = Math.ceil(Math.random() * 10);
+
+    try {
+        const urlBad = 'https://www.breakingbadapi.com/api/quotes/' + random;
+        const respuestaBad =await fetch (urlBad);
+        const dataBad =await respuestaBad.json();
+        mostrarHtmlBad(dataBad[0]);
+    }catch (error) {
+        console.log(error);
+    }
+}
+console.log(urlBad)
+
+const mostrarHtmlBad =({quote, author}) => {
+    fraseBad.textContent = quote;
+    fraseBad.textContent = quote;
+}
+
+botonBad.addEventListener('click', consultarApiBad)
+document.addEventListener('DOMContentLoaded', consultarApiBad);
+
+
+
+
 getCharacter();
 cargarPeliculas();
 
